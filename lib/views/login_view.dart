@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:laboratory/routes/app_routes.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -16,7 +17,7 @@ class LoginView extends StatelessWidget {
             SizedBox(
               width: MediaQuery.of(context).size.width,
               child: Image.asset(
-                "assets/logo.jpg",
+                "assets/logo.png",
                 height: 120,
               ),
             ),
@@ -25,11 +26,11 @@ class LoginView extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () => context.push(path(AppRoutes.register)),
-              child: const Text("Register"),
+              child: Text(AppLocalizations.of(context)!.register_button),
             ),
             ElevatedButton(
               onPressed: () => context.go(path(AppRoutes.home)),
-              child: const Text("Login to my app"),
+              child: Text(AppLocalizations.of(context)!.login_button),
             ),
           ],
         ),

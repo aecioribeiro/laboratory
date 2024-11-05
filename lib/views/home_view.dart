@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:laboratory/routes/app_routes.dart';
 import 'package:laboratory/views/tabs/dashboard_tab.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'tabs/maps_tab.dart';
 import 'tabs/settings_tab.dart';
@@ -16,20 +17,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   int currentTab = 0;
 
-  List<BottomNavigationBarItem> tabs = [
-    const BottomNavigationBarItem(
-      icon: Icon(Icons.home),
-      label: "Dashboard",
-    ),
-    const BottomNavigationBarItem(
-      icon: Icon(Icons.map),
-      label: "Maps",
-    ),
-    const BottomNavigationBarItem(
-      icon: Icon(Icons.settings),
-      label: "Settings",
-    ),
-  ];
+  late List<BottomNavigationBarItem> tabs;
 
   List<Widget> views = [
     const DashboardTab(),
@@ -39,6 +27,21 @@ class _HomeViewState extends State<HomeView> {
 
   @override
   Widget build(BuildContext context) {
+    tabs = [
+      BottomNavigationBarItem(
+        icon: const Icon(Icons.home),
+        label: AppLocalizations.of(context)!.tab_dashboard,
+      ),
+      BottomNavigationBarItem(
+        icon: const Icon(Icons.map),
+        label: AppLocalizations.of(context)!.tab_maps,
+      ),
+      BottomNavigationBarItem(
+        icon: const Icon(Icons.settings),
+        label: AppLocalizations.of(context)!.tab_settings,
+      ),
+    ];
+
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         items: tabs,

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MapsTab extends StatefulWidget {
   const MapsTab({super.key});
@@ -31,7 +32,7 @@ class MapsTabState extends State<MapsTab> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(25),
+        padding: const EdgeInsets.fromLTRB(25, 58, 25, 25),
         child: GoogleMap(
           mapType: MapType.hybrid,
           initialCameraPosition: kGooglePlex,
@@ -45,7 +46,7 @@ class MapsTabState extends State<MapsTab> {
           goToTheLake();
         },
         icon: const Icon(Icons.location_on),
-        label: const Text("Go to Lake"),
+        label: Text(AppLocalizations.of(context)!.maps_goto_lake),
       ),
     );
   }
