@@ -1,0 +1,10 @@
+{
+  "app_name": "Laboratory",
+  "login_button": "Entrar no app",
+  "register_button":  "Cadastrar",
+  "tab_dashboard":  "Dashboard",
+  "tab_maps":  "Mapa",
+  "tab_settings":  "Configurações",
+  "maps_goto_lake":  "Ir para o Lago",
+  "logout_button": "Sair"
+}

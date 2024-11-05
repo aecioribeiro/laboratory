@@ -1,0 +1,10 @@
+{
+  "app_name": "Laboratory",
+  "login_button": "تسجيل الدخول إلى التطبيق",
+  "register_button":  "انشاء حساب",
+  "tab_dashboard": "لوحة التحكم",
+  "tab_maps": "الخرائط",
+  "tab_settings": "الإعدادات",
+  "maps_goto_lake": "الانتقال إلى البحيرة",
+  "logout_button": "تسجيل الخروج"
+}
