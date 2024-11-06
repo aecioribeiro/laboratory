@@ -38,6 +38,8 @@ dependencies:
   flutter_local_notifications: ^18.0.0
   google_maps_flutter: ^2.9.0
   flutter_bloc:
+  dio:
+  equatable:
 
   json_annotation: ^4.9.0
   freezed_annotation:
