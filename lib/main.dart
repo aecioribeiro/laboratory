@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:laboratory/routes/app_routes.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+class AppObserver extends BlocObserver {
+  const AppObserver();
+}
+
 void main() {
+  Bloc.observer = const AppObserver();
   runApp(const MyApp());
 }
 
