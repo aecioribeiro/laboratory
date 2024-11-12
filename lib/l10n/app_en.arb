@@ -6,5 +6,8 @@
     "tab_maps":  "Maps",
     "tab_settings":  "Settings",
     "maps_goto_lake":  "Go to Lake",
-    "logout_button": "Logout"
+    "logout_button": "Logout",
+    "load_more_button": "Load More",
+    "add_new_place_button": "Add new place",
+    "no_places_yet": "No places added yet."
 }

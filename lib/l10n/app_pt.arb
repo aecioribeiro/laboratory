@@ -6,5 +6,8 @@
   "tab_maps":  "Mapa",
   "tab_settings":  "Configurações",
   "maps_goto_lake":  "Ir para o Lago",
-  "logout_button": "Sair"
+  "logout_button": "Sair",
+  "load_more_button": "Carregar mais",
+  "add_new_place_button": "Adicionar novo ponto",
+  "no_places_yet": "Nenhum ponto adicionado ainda."
 }

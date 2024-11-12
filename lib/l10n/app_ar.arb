@@ -6,5 +6,8 @@
   "tab_maps": "الخرائط",
   "tab_settings": "الإعدادات",
   "maps_goto_lake": "الانتقال إلى البحيرة",
-  "logout_button": "تسجيل الخروج"
+  "logout_button": "تسجيل الخروج",
+  "load_more_button": "تحميل المزيد",
+  "add_new_place_button": "إضافة مكان جديد",
+  "no_places_yet": "لم تتم إضافة أي أماكن بعد."
 }
