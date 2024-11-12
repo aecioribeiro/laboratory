@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:laboratory/views/home_view.dart';
 import 'package:laboratory/views/login_view.dart';
+import 'package:laboratory/views/map_view.dart';
 import 'package:laboratory/views/register_view.dart';
 
 enum AppRoutes {
@@ -33,6 +34,11 @@ final routing = GoRouter(
       path: path(AppRoutes.home),
       name: AppRoutes.home.name,
       builder: (context, state) => const HomeView(),
+    ),
+    GoRoute(
+      path: path(AppRoutes.map),
+      name: AppRoutes.map.name,
+      builder: (context, state) => const MapView(),
     ),
   ],
   redirect: (context, state) {
