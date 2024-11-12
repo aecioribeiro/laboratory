@@ -4,6 +4,7 @@ import 'package:laboratory/business/articles/event/articles_events.dart';
 import 'package:laboratory/business/articles/newsbloc.dart';
 import 'package:laboratory/business/articles/state/articles_state.dart';
 import 'package:laboratory/data/articles_model.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DashboardTab extends StatelessWidget {
   const DashboardTab({super.key});
@@ -29,7 +30,10 @@ class DashboardTab extends StatelessWidget {
                   if (index == response.articles?.length) {
                     return Center(
                       child: OutlinedButton(
-                          onPressed: () {}, child: Text("Load More")),
+                        onPressed: () {},
+                        child: Text(
+                            AppLocalizations.of(context)!.load_more_button),
+                      ),
                     );
                   }
 
