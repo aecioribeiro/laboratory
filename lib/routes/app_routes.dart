@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:laboratory/data/places_model.dart';
 import 'package:laboratory/views/home_view.dart';
 import 'package:laboratory/views/login_view.dart';
 import 'package:laboratory/views/map_view.dart';
@@ -38,7 +39,9 @@ final routing = GoRouter(
     GoRoute(
       path: path(AppRoutes.map),
       name: AppRoutes.map.name,
-      builder: (context, state) => const MapView(),
+      builder: (context, state) => MapView(
+        state.extra != null ? state.extra as PlacesModel : null,
+      ),
     ),
   ],
   redirect: (context, state) {

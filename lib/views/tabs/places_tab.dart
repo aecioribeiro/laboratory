@@ -48,6 +48,9 @@ class PlacesTab extends StatelessWidget {
 
                     return ListTile(
                       title: Text(model.title ?? ""),
+                      onTap: () =>
+                          context.push(path(AppRoutes.map), extra: model),
+                      onLongPress: () => delete(context, model.id ?? 0),
                       leading: const Icon(Icons.location_on),
                     );
                   },
