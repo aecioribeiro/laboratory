@@ -19,7 +19,7 @@ class _HomeViewState extends State<HomeView> {
 
   List<Widget> views = [
     const DashboardTab(),
-    const PlacesTab(),
+    PlacesTab(),
     const SettingsTab(),
   ];
 
