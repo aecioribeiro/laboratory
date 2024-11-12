@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class MapsTab extends StatefulWidget {
-  const MapsTab({super.key});
+class MapView extends StatefulWidget {
+  const MapView({super.key});
 
   @override
-  State<StatefulWidget> createState() => MapsTabState();
+  State<StatefulWidget> createState() => MapViewState();
 }
 
-class MapsTabState extends State<MapsTab> {
-  MapsTabState();
+class MapViewState extends State<MapView> {
+  MapViewState();
 
   final Completer<GoogleMapController> _controller =
       Completer<GoogleMapController>();
@@ -31,6 +31,7 @@ class MapsTabState extends State<MapsTab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(25, 58, 25, 25),
         child: GoogleMap(
