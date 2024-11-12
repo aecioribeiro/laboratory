@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:laboratory/routes/app_routes.dart';
 import 'package:laboratory/views/tabs/dashboard_tab.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'tabs/maps_tab.dart';
+import 'tabs/places_tab.dart';
 import 'tabs/settings_tab.dart';
 
 class HomeView extends StatefulWidget {
@@ -21,7 +19,7 @@ class _HomeViewState extends State<HomeView> {
 
   List<Widget> views = [
     const DashboardTab(),
-    const MapsTab(),
+    const PlacesTab(),
     const SettingsTab(),
   ];
 
