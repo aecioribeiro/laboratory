@@ -9,5 +9,7 @@
     "logout_button": "Logout",
     "load_more_button": "Load More",
     "add_new_place_button": "Add new place",
-    "no_places_yet": "No places added yet."
+    "no_places_yet": "No places added yet.",
+    "add_here_button": "Add this place",
+    "add_title": "Add a title"
 }

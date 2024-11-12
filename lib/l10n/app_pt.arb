@@ -9,5 +9,7 @@
   "logout_button": "Sair",
   "load_more_button": "Carregar mais",
   "add_new_place_button": "Adicionar novo ponto",
-  "no_places_yet": "Nenhum ponto adicionado ainda."
+  "no_places_yet": "Nenhum ponto adicionado ainda.",
+  "add_here_button": "Adicionar este ponto",
+  "add_title": "Adicione um título"
 }

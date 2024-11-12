@@ -9,5 +9,7 @@
   "logout_button": "تسجيل الخروج",
   "load_more_button": "تحميل المزيد",
   "add_new_place_button": "إضافة مكان جديد",
-  "no_places_yet": "لم تتم إضافة أي أماكن بعد."
+  "no_places_yet": "لم تتم إضافة أي أماكن بعد.",
+  "add_here_button": "أضف هذا المكان",
+  "add_title": "أضف عنوانًا"
 }
