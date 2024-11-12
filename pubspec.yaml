@@ -41,6 +41,10 @@ dependencies:
   dio:
   equatable:
 
+  sqflite: ^2.4.1
+  path_provider:
+  path: ^1.9.0
+
   json_annotation: ^4.9.0
   freezed_annotation:
 
