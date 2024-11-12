@@ -25,7 +25,7 @@ class SessionDAO {
 
     final values = {
       "title": entry.title,
-      "createdAt": entry.createdAt,
+      "createAt": entry.createdAt,
       "lat": entry.lat,
       "lng": entry.lng
     };
@@ -46,8 +46,12 @@ class SessionDAO {
       "lng": entry.lng
     };
 
-    var result = await db?.update(PlacesDatabase.name, values,
-        where: "id = ?", whereArgs: [entry.id]);
+    var result = await db?.update(
+      PlacesDatabase.name,
+      values,
+      where: "id = ?",
+      whereArgs: [entry.id],
+    );
 
     return result ?? -1;
   }
@@ -55,8 +59,11 @@ class SessionDAO {
   Future<int> delete(int id) async {
     final db = await databaseProvider.database;
 
-    var result =
-        db?.delete(PlacesDatabase.name, where: "id=?", whereArgs: [id]);
+    var result = db?.delete(
+      PlacesDatabase.name,
+      where: "id=?",
+      whereArgs: [id],
+    );
 
     return result ?? -1;
   }

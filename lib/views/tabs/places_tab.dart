@@ -9,12 +9,14 @@ import 'package:laboratory/routes/app_routes.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class PlacesTab extends StatelessWidget {
-  const PlacesTab({super.key});
+  PlacesTab({super.key});
+
+  var placesBloc = PlacesBloc()..add(LoaderEvent());
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => PlacesBloc()..add(LoaderEvent()),
+      create: (context) => placesBloc,
       child: Scaffold(
         body: BlocBuilder<PlacesBloc, PlacesState>(
           builder: (context, state) {
@@ -58,11 +60,41 @@ class PlacesTab extends StatelessWidget {
           },
         ),
         floatingActionButton: FloatingActionButton.extended(
-          onPressed: () => context.push(path(AppRoutes.map)),
+          onPressed: () async {
+            var result = await context.push(path(AppRoutes.map));
+
+            if (result == true) placesBloc.add(LoaderEvent());
+          },
           icon: const Icon(Icons.location_on),
           label: Text(AppLocalizations.of(context)!.add_new_place_button),
         ),
       ),
     );
+  }
+
+  Future<void> delete(BuildContext context, int id) async {
+    var result = await showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          content: Text("Are you sure you want to delete?"),
+          actions: [
+            TextButton(
+              onPressed: () => context.pop(false),
+              child: Text("Cancel"),
+            ),
+            TextButton(
+              onPressed: () => context.pop(true),
+              child: Text("Ok"),
+            ),
+          ],
+        );
+      },
+    );
+
+    if (result) {
+      placesBloc.deletePlace(id: id);
+      placesBloc.add(LoaderEvent());
+    }
   }
 }
